@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:focus_app/views/home.dart';
+import 'package:focus_app/views/login_page.dart';
+import 'package:focus_app/views/register_page.dart';
 
-import 'Utilities/appStyles.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/login':(context) => const LoginPage(),
+        '/register':(context) => const RegisterPage(),
+      },
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
       home: const MyHomePage(),
     );
@@ -34,6 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     
-    return HomeView();
+    return SafeArea(child: LoginPage());
   }
 }
