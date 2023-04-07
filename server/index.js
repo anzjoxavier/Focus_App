@@ -1,6 +1,7 @@
 const app=require("./app");
 const db=require("./config/db");
 const UserModel=require("./models/user.model");
+const TodoModel=require("./models/todo.model");
 const port=3100;
 
 app.get('/',(req,res)=>{

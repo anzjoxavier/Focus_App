@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:focus_app/views/home.dart';
+import 'package:focus_app/views/home_page.dart';
 import 'package:focus_app/views/login_page.dart';
 import 'package:focus_app/views/register_page.dart';
+import 'package:focus_app/views/sample_page.dart';
 
 
 
@@ -40,6 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     
-    return SafeArea(child: LoginPage());
+    return SafeArea(child:SamplePage());
   }
 }

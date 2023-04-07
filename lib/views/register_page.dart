@@ -16,10 +16,14 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  bool showPass = true;
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
   bool _isNotEmailValidate = false;
   bool _isNotPasswordValidate = false;
+
+  
+
   void registerUser() async {
     if (emailController.text.isNotEmpty && passController.text.isNotEmpty) {
       var regBody = {
@@ -72,7 +76,7 @@ class _RegisterPageState extends State<RegisterPage> {
             TextBox(
               width: 0.9 * width,
               hintText: "Password",
-              hideText: true,
+              hideText: showPass,
               enableSuggestions: false,
               autoCorrect: false,
               textEditingController: passController,
